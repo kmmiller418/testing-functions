@@ -9,14 +9,9 @@ const reverseNum = (num) => {
     return newNum[0] === "0" ? newNum : Number(newNum);
   };
   
-  console.log(reverseNum(349210));
-  console.log(reverseNum(349212));
-  
   const alphebetizeString = (str) => {
     return str.split("").sort().join("");
   };
-  
-  console.log(alphebetizeString("webmaster"));
   
   const capitalize = (str) => {
     let sentence = str.split(" ");
@@ -25,17 +20,15 @@ const reverseNum = (num) => {
       .map((word) => word[0].toUpperCase() + word.substring(1))
       .join(" ");
   };
-  
-  console.log(capitalize("the quick brown fox"));
-  
+    
   const isPrime = (num) => {
     for (let i = 2; i < num; i++) {
       return num % i === 0 ? false : true;
     }
   };
   
-  console.log(isPrime(5));
-  console.log(isPrime(8));
+//   console.log(isPrime(5));
+//   console.log(isPrime(8));
   
   const removeDupes = (str) => {
     let noDupes = [];
@@ -48,7 +41,7 @@ const reverseNum = (num) => {
     return noDupes.join("");
   };
   
-  console.log(removeDupes("thequickbrownfoxjumpsoverthelazydog"));
+//   console.log(removeDupes("thequickbrownfoxjumpsoverthelazydog"));
   
   const secondFinder = (arr) => {
     arr.sort((a, b) => a - b);
@@ -56,7 +49,7 @@ const reverseNum = (num) => {
     return [arr[1], arr[arr.length - 2]];
   };
   
-  console.log(secondFinder([1, 2, 3, 4, 5]));
+//   console.log(secondFinder([1, 2, 3, 4, 5]));
   
   function swap(array, index1, index2) {
     [array[index1], array[index2]] = [array[index2], array[index1]];
@@ -80,5 +73,7 @@ const reverseNum = (num) => {
     return array;
   }
   
-  console.log(bubbleSort([12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]));
+//   console.log(bubbleSort([12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]));
   
+
+module.exports = { reverseNum, alphebetizeString, capitalize, isPrime, removeDupes, secondFinder, swap, bubbleSort};
