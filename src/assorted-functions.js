@@ -27,9 +27,6 @@ const reverseNum = (num) => {
     }
   };
   
-//   console.log(isPrime(5));
-//   console.log(isPrime(8));
-  
   const removeDupes = (str) => {
     let noDupes = [];
   
@@ -40,16 +37,13 @@ const reverseNum = (num) => {
     });
     return noDupes.join("");
   };
-  
-//   console.log(removeDupes("thequickbrownfoxjumpsoverthelazydog"));
-  
+    
   const secondFinder = (arr) => {
     arr.sort((a, b) => a - b);
   
     return [arr[1], arr[arr.length - 2]];
   };
-  
-//   console.log(secondFinder([1, 2, 3, 4, 5]));
+
   
   function swap(array, index1, index2) {
     [array[index1], array[index2]] = [array[index2], array[index1]];
