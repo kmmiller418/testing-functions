@@ -48,7 +48,6 @@ describe("capitalize", () => {
 
   test("it should capitalize the first letter in every word", () => {
     expect(() => toUpperCase().toHaveBeenCalled());
-    expect(() => capitalizeStr.toHaveReturned("The Quick Brown Fox"));
   });
 });
 
@@ -80,6 +79,10 @@ describe("removeDupes", () => {
     });
 
     expect(() => Math.max(dict.Object.Values).toBe(1));
+  });
+
+  test("it should return even if an empty string is given", () => {
+      expect(() => removeDupes.toHaveReturned());
   });
 });
 
@@ -124,5 +127,9 @@ describe("bubbleSort", () => {
     expect(() => {
       (result[0] > result[1] > result[-2] > result[-1]).toBeTruthy;
     });
+  });
+
+  test("it should utilize swap to switch to sort array elements", () => {
+    expect(() => swap().toHaveBeenCalled());
   });
 });
