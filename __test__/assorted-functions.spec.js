@@ -83,11 +83,40 @@ describe("removeDupes", () => {
   });
 });
 
+describe ("secondFinder", () => {
+    const arr = [1, 3, 55, 21, 2, 1];
+    const result = secondFinder(arr);
+
+    test("it should return an array", () => {
+        expect(() => typeof result.toBe("array"));
+    });
+
+    test("it should not return the max value", () => {
+        expect(() => result.not.toContain(Math.max(arr)));
+    });
+
+    test("it should not return the min value", () => {
+        expect(() => result.not.toContain(Math.min(arr)));
+    });
+});
+
+describe("swap", () => {
+  test("it should return an array", () => {
+    expect(() => typeof result.toBe("array"));
+  });
+
+  test("it should swap the elements of an array at provided index1 and index2", () => {
+    const arr = [1, 2, 3];
+    const result = swap(arr, 0, 2);
+    expect(() => result[0].toBe(3));
+  });
+});
+
 describe("bubbleSort", () => {
   const arr = [12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213];
   const result = bubbleSort(arr);
 
-  test("not an array", () => {
+  test("it should return an array", () => {
     expect(() => typeof result.toBe("array"));
   });
 
